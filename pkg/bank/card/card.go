@@ -3,22 +3,17 @@ package card
 import (
 	"bank/pkg/bank/types"
 )
-func Total(cards [] types.Card) types.Money {
-	 var operations [] types.Money 
-	 operations = append(operations, 10_000_00)
-	 operations= append(operations, 10_000_00)
-	 
-	 sum := sum(operations)
-	 
-	 return sum
-}
-func sum(operations[]types.Money) types.Money{
-	sum:= types.Money(0)
-	for _, operation := range operations {
-		sum += operation
+
+func PaymentSources(cards []types.Card) []types.PaymentSource {
+	c := []types.PaymentSource{}
+	for _, card := range cards {
+		if card.Balance > 0 && card.Active {
+			c = append(c, types.PaymentSource{
+				Number:  card.PAN,
+				Balance: card.Balance,
+				Active:  card.Active,
+			})
+		}
 	}
-	return sum
+	return c
 }
-
-
-
