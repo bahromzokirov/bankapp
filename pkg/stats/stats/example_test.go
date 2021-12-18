@@ -1,7 +1,7 @@
 package stats
 
 import (
-	"github.com/bahromzokirov/bank/pkg/bank/types"
+	"github.com/bahromzokirov/stats/pkg/stats/types"
 	"fmt"
 )
 
