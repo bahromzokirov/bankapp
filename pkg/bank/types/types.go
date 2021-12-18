@@ -21,9 +21,9 @@ type Card struct {
 	Active   bool
 	Number PAN
 }
-type PaymentSource struct {
-	Number PAN
-	Balance Money
-	Active bool
-
+type Category string
+type Payment struct {
+	ID int
+	Amount Money
+	Category Category
 }
