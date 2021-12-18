@@ -1,3 +1,3 @@
-module github.com/bahromzokirov/bank
+module github.com/bahromzokirov/stats
 
 go 1.17
