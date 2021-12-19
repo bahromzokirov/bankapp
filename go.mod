@@ -1,5 +1,3 @@
-module github.com/bahromzokirov/stats/v2
+module github.com/bahromzokirov/stats
 
 go 1.17
-
-require github.com/bahromzokirov/stats/v2 v2.0.0 // indirect
